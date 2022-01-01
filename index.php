@@ -29,6 +29,8 @@
 <?php 
  $totalspace = 5;
  $spaceavailable = 0;
+ $sqltable = "create table if not exixts parking(id int AUTO_INCREMENT PRIMARY KEY,name varchar(20),carno varchar(20), dt DATETIME DEFAULT CURRENT_TIMESTAMP";
+ $tableres = mysqli_query($con,$sqltable);
  $sqlcount = "select count(*) from parking";
  $rescount = mysqli_query($con,$sqlcount);
  $countcar = mysqli_fetch_array($rescount);
